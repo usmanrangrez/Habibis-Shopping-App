@@ -1,38 +1,262 @@
-.App {
-  text-align: center;
+body {
+	background-color: #282828;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+	text-decoration: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* MAIN ////////////////////////////////////////////////////////////// */
+
+main {
+	background-color: #fff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+main .content {
+	padding-top: 40px;
+	padding-bottom: 40px;
 }
 
-.App-link {
-  color: #61dafb;
+main .pg-header {
+	padding: 60px 0;
+	background: #e6e6e6;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+main .pg-header h1 {
+	color: #333;
+	font-weight: 600;
+	font-size: 32px;
+	text-transform: uppercase;
+	margin: 0;
+}
+
+/* BUTTON ////////////////////////////////////////////////////////////// */
+
+.btn-primary {
+	border-radius: 0;
+}
+
+/* BREADCRUMB ////////////////////////////////////////////////////////////// */
+
+.breadcrumb {
+	margin-bottom: 0;
+	font-size: 13px;
+}
+
+.breadcrumb a {
+	color: #000;
+}
+
+@media all and (max-width: 991px) {
+	.breadcrumb.justify-content-end {
+		justify-content: flex-start !important;
+	}
+}
+
+/* ABOUT ////////////////////////////////////////////////////////////// */
+
+.about h2 {
+	text-transform: uppercase;
+	font-size: 22px;
+	font-weight: 600;
+	padding-bottom: 10px;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.about h2::after {
+	position: absolute;
+	content: '';
+	width: 50px;
+	bottom: -6px;
+	height: 2px;
+	background-color: #666;
+	left: 0;
+}
+
+/* PRODUCTS ////////////////////////////////////////////////////////////// */
+
+.products-row .card .card-body {
+	background: #f5f5f5;
+}
+
+.products-row .col-lg-4 {
+	margin-bottom: 20px;
+}
+
+.products-row .card-text {
+	color: #666;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* CARD ////////////////////////////////////////////////////////////// */
+
+.card {
+	border-radius: 0;
+	box-shadow: 0px 10px 10px #eee;
+}
+
+.card .card-title {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.card .img-wrap {
+	height: 300px;
+	text-align: center;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+	display: flex;
+	align-items: center;
+	background-color: rgba(0, 0, 0, 0.125);
+}
+
+.card .img-wrap img {
+	width: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	margin: 0 auto;
+	object-fit: cover;
+}
+
+.card .price {
+	color: #0d6efd;
+}
+
+.card .btn-primary {
+	font-weight: 600;
+}
+
+/* SINGLE PRODUCT ////////////////////////////////////////////////////////////// */
+
+.single h2 {
+	text-transform: capitalize;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.single h2::after {
+	position: absolute;
+	content: '';
+	width: 50px;
+	bottom: -6px;
+	height: 2px;
+	background-color: #666;
+	left: 0;
+}
+
+.single .btn-primary {
+	font-weight: 600;
+}
+
+.single .price {
+	font-size: 22px;
+}
+
+.single .price strong {
+	color: #0a58ca;
+}
+
+
+/* POSTS ////////////////////////////////////////////////////////////// */
+
+.posts .col-sm-6 {
+	margin-bottom: 20px;
+}
+
+.posts .card-title {
+	text-transform: capitalize;
+}
+
+.posts .card-text {
+	text-align: center;
+}
+
+/* HEADER ////////////////////////////////////////////////////////////// */
+
+.brand{
+	padding: 8px;
+}
+
+header {
+	padding: 20px 0;
+	background-color: #000;
+}
+
+header .logo {
+	transform: rotate(-6deg);
+	transition: all 0.3s ease;
+}
+
+header .logo:hover {
+	transform: rotate(0deg);
+}
+
+header .brand {
+	font-size: 30px;
+	color: #fff;
+	font-weight: 700;
+	font-family: 'Leckerli One', cursive;
+	background-color: #2d2d2d;
+	border-radius: 40px;
+	border-bottom: 2px solid #6294de;
+	text-shadow: 2px 2px 0px #000;
+}
+
+header .nav-link {
+	font-weight: 700;
+	color: #999;
+	border-radius: 0;
+	font-size: 14px;
+}
+
+header .nav-link:hover {
+	color: #fff;
+}
+
+/* FOOTER ////////////////////////////////////////////////////////////// */
+
+footer {
+	padding: 40px 0 100px 0;
+}
+
+footer .nav-link {
+	color: rgba(255, 255, 255, 0.75);
+	padding-left: 0;
+	padding-right: 0;
+	margin: 0 10px;
+}
+
+footer .nav-link:hover {
+	color: #fff;
+}
+
+footer .nav-link.active {
+	color: #fff;
+	border-bottom: 1px solid #666;
+}
+
+footer .copyrights {
+	color: rgba(255, 255, 255, 0.75);
+	text-align: center;
+	margin-top: 10px;
+}
+
+footer .copyrights a {
+	color: rgba(255, 255, 255, 0.75);
+}
+
+footer .copyrights a:hover {
+	color: #fff;
+	background-color: black;
+	color: wheat;
+	border-radius: 99999px;
+	padding: 10px 20px;
+}
+
+.usman{
+	position: relative;
+	top: 200px;
+	font-size: 20px;
 }
